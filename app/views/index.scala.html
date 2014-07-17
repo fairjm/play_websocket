@@ -1,0 +1,19 @@
+@(message: String)(implicit request: RequestHeader)
+
+@main("Welcome to Play") {
+	
+<ul id="messages"></ul>
+	
+<script type="text/javascript">
+$(function() {
+	ws = new WebSocket("@routes.Application.showSystemInfo.webSocketURL()")
+	ws.onmessage = function(msg) {
+		$('<li />').text(msg.data).appendTo('#messages')
+		if($('#messages li').size()>10){
+		  $('#messages :first-child').remove()
+		}
+	}
+})
+</script>
+
+}
