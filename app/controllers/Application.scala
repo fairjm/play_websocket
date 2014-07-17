@@ -43,7 +43,7 @@ object Application extends Controller {
 
   private def systemInfo:String = {
     import info.SystemInfo
-    ""+SystemInfo.getCpuCount()
+    ""
   }
   
 }
