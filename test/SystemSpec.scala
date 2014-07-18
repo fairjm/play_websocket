@@ -11,6 +11,10 @@ class SystemSpec extends Specification {
       println(SystemInfo.cpus)
       
       println(SystemInfo.cpu_status)
+      
+      println(SystemInfo.mem_info)
+      
+      println(SystemInfo.swap_info)
     }
   }
 }
